@@ -1,0 +1,100 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #eaeaea;
+    margin: 0;
+    padding: 0;
+    background-color: #505f69;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+header {
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    padding-right: 3px;
+    justify-content: center;
+    gap: 20px;
+    background: linear-gradient(135deg, #073769, #17a4c0);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#search {
+    width: 50%;
+    display: block;
+    padding: 14px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background: #1b304657;
+    color: #eceaea;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #073769;
+    border-bottom: 4px solid #073769;
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.active-category {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #0a2c33 !important;
+    color: white !important;
+}
+
+
+.btn {
+    margin: 8px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 4px 7px 4px #292a2b77;
+    background-color: white;
+    color: rgb(52, 87, 121);
+}
+
+.btn:hover {
+    background-color: #0a2c33;
+    color: white;
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    background: #222;
+    color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.card-body {
+    text-align: center;
+    background-color: #073769;
+    padding: 20px;
+}

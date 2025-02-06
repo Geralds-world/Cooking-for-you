@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Flavor Lab</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <script defer src="/script.js"></script>
+</head>
+<body>
+    <header class="d-flex align-items-center text-white">
+        <h1>The Flavor Lab</h1>
+        <input type="text" id="search" class="form-control w-50" placeholder="🔎 Search for a dish..." onkeyup="searchRecipes()">
+    </header>
+
+    <!-- Filter Dropdown Section -->
+    <section id="additional-filters" class="text-center my-3">
+        <h3>Filter by Ingredients and Preferences</h3>
+        <div style="justify-content: center;" class="d-flex flex-wrap my-3">
+            <!-- Category buttons in the same line -->
+            <button class="btn btn-outline-primary m-2 category-btn" data-category="Light Meals" onclick="filterCategory('Light Meals')">Light Meals</button>
+            <button class="btn btn-outline-primary m-2 category-btn" data-category="Dinner Plans" onclick="filterCategory('Dinner Plans')">Dinner Plans</button>
+            <button class="btn btn-outline-primary m-2 category-btn" data-category="Desserts" onclick="filterCategory('Desserts')">Desserts</button>
+
+            <!-- Dropdown filter -->
+            <div class="dropdown">
+                <button class="btn btn-outline-primary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Choose Filters
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Chicken')">Chicken</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Vegan')">Vegan</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Gluten-Free')">Gluten-Free</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Dairy-Free')">Dairy-Free</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Spicy')">Spicy</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Quick Meals')">Quick Meals</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Low-Carb')">Low-Carb</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Paleo')">Paleo</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Keto')">Keto</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Healthy')">Healthy</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Sugar-Free')">Sugar-Free</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Kid-Friendly')">Kid-Friendly</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Budget-Friendly')">Budget-Friendly</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('One-Pot')">One-Pot</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Meal Prep')">Meal Prep</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Family-Friendly')">Family-Friendly</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('No-Cook')">No-Cook</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Comfort Food')">Comfort Food</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('High-Protein')">High-Protein</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Low-Fat')">Low-Fat</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="toggleFilter('Airfryer')">Airfryer Only</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Display chosen filters -->
+        <div id="selected-filters" class="mt-3"></div>
+    </section>
+
+    <main id="recipes-container" class="container">
+        <div class="row" id="recipe-cards">
+            <!-- Recipe Cards will be injected here -->
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
